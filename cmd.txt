@@ -1,0 +1,23 @@
+https://github.com/bezkoder/nodejs-express-mysql/tree/master/app/controllers
+
+
+powershell , use mysqlsh
+$ini=Get-Content -PATH C:\Users\jason\.ssh\clever-cloud\addon-config.ini
+$uri=($ini | Where-Object { $_ -match 'MYSQL_ADDON_URI=' } | select-object {$_ -split "="}).psobject.properties.value[1]
+mysqlsh --uri $uri
+
+
+mysqlsh cmd:
+\help \quit \js \py 
+\sql 
+  show tables;
+  select * from user;
+
+
+CREATE TABLE IF NOT EXISTS `tutorials` (
+  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  title varchar(255) NOT NULL,
+  description varchar(255),
+  published BOOLEAN DEFAULT false
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

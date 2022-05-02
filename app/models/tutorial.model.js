@@ -5,6 +5,7 @@ const Tutorial = function(tutorial) {
   this.title = tutorial.title;
   this.description = tutorial.description;
   this.published = tutorial.published;
+  this.created = tutorial.created;
 };
 
 Tutorial.create = (newTutorial, result) => {
